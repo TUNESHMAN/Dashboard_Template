@@ -11,25 +11,25 @@ const icons = {
 
 const support = {
     id: 'support',
-    title: 'Support',
+    title: '',
     type: 'group',
     children: [
         {
             id: 'sample-page',
-            title: 'Sample Page',
+            title: 'Volunteers',
             type: 'item',
-            url: '/sample-page',
+            url: '/volunteers',
             icon: icons.ChromeOutlined
         },
-        {
-            id: 'documentation',
-            title: 'Documentation',
-            type: 'item',
-            url: 'https://codedthemes.gitbook.io/mantis-react/',
-            icon: icons.QuestionOutlined,
-            external: true,
-            target: true
-        }
+        // {
+        //     id: 'documentation',
+        //     title: 'Documentation',
+        //     type: 'item',
+        //     url: 'https://codedthemes.gitbook.io/mantis-react/',
+        //     icon: icons.QuestionOutlined,
+        //     external: true,
+        //     target: true
+        // }
     ]
 };
 

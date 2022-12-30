@@ -22,16 +22,15 @@ import NumberFormat from "react-number-format";
 // project import
 import Dot from "components/@extended/Dot";
 
-function createData(name, company, author, status) {
-  return { name, company, author, status };
+function createData(name, address, taxNumber, status) {
+  return { name, address, taxNumber, status };
 }
 
 const rows = [
-  createData("TR000001", "Unilever", "Ben", 0),
-  createData("TR000001", "Unilever", "Ben", 1),
-  createData("TR000001", "Unilever", "Ben", 2),
-  createData("TR000001", "Unilever", "Ben", 1),
-  createData("TR000001", "Unilever", "Ben", 0),
+  createData("Adeola Adebari", "Ikeja, Lagos", "01234", 0),
+  createData("Babatunde Adeniran", "Ikeja, Lagos", "01234", 0),
+  createData("John Doe", "Ikeja, Lagos", "01234", 2),
+  createData("Mike Phil", "Ikeja, Lagos", "01234", 1),
 ];
 
 function descendingComparator(a, b, orderBy) {
@@ -72,23 +71,23 @@ const headCells = [
     label: "Name",
   },
   {
-    id: "company",
+    id: "address",
     align: "left",
     disablePadding: true,
-    label: "Company",
+    label: "Address",
   },
   {
-    id: "author",
+    id: "taxNumber",
     align: "left",
     disablePadding: true,
-    label: "Author",
+    label: "Tax Number",
   },
   {
     id: "status",
     align: "left",
     disablePadding: false,
 
-    label: "Status",
+    label: "Tax Status",
   },
 ];
 
@@ -208,8 +207,8 @@ export default function OrderTable() {
                         {row.name}
                       </Link>
                     </TableCell>
-                    <TableCell align="left">{row.company}</TableCell>
-                    <TableCell align="left">{row.author}</TableCell>
+                    <TableCell align="left">{row.address}</TableCell>
+                    <TableCell align="left">{row.taxNumber}</TableCell>
                     <TableCell align="left">
                       <OrderStatus status={row.status} />
                     </TableCell>
